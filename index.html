@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Clicker</title>
+    <style>
+
+        * {
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            
+        }
+        body {
+            border: 5px solid yellow;
+            background: rgb(165, 213, 237);
+            
+            place-items: center;
+        }
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1>Jogo Clicker👆</h1>
+
+    <p id="contador">0</p>
+    <button onclick="maisum()">+1</button>
+    <button onclick="Reset()">Reset</button>
+    </section>
+
+    <script>
+        let numero = 0;
+
+        function maisum() {
+            numero += 1;
+            render();
+        }
+
+        function Reset() {
+            numero = 0;
+            render();
+        }
+        function render() {
+            const p=document.querySelector("#contador");
+            p.innerText=numero;
+
+        }
+        render()
+    </script>
+</body>
+</html>
