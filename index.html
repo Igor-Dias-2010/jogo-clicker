@@ -3,37 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Clicker</title>
+    <title>Click Counter :)</title>
     <style>
+
+
 
         * {
             margin: 10px;
             box-sizing: border-box;
+            padding: 4px;
         }
         button {
-            
+            padding: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: black;
         }
+        #botao-somar {
+            background: lightgreen;
+            border: 3px solid green;
+            transition: all 0.5s ease;
+        }
+        #botao-somar:hover {
+            background-color: darkgreen;
+            transform:scale(1.1);
+            color: white;
+        }
+        #botao-reset {
+            background: lightcoral;
+            border: 3px solid red;
+            transition: all 0.5s ease;
+        }
+        #botao-reset:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+            color: white;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        
         body {
             border: 5px solid yellow;
             background: rgb(165, 213, 237);
-            
+            min-height: 100px;
+            display: grid;
             place-items: center;
         }
         p {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: large;
+            font-family:fantasy;
+            font-size: 37px;
+            color: black;
+        }
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: darkslategray;
+        }
+        h2 {
+            font-family:Arial, Helvetica, sans-serif;
+            color: rgb(101, 109, 111);
+        }
+        h3 {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: rgb(101, 109, 111);
+        }
+        section {
+            padding: 30px;
+            background: rgb(139, 208, 250);
+            border: 3px solid rgb(49, 179, 199);
+            border-radius: 10px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <section>
-    <h1>Jogo Clicker👆</h1>
-
+        <h1>Click Counter</h1>
+    <h2>You clicked</h2>
+    
     <p id="contador">0</p>
-    <button onclick="maisum()">+1</button>
-    <button onclick="Reset()">Reset</button>
+    <h3>Times</h3>
+    <button id="botao-somar" onclick="maisum()">+1</button>
+    <button id="botao-reset" onclick="Reset()">Reset</button>
     </section>
-
     <script>
         let numero = 0;
 
@@ -45,12 +101,15 @@
         function Reset() {
             numero = 0;
             render();
+            
         }
+
         function render() {
             const p=document.querySelector("#contador");
             p.innerText=numero;
-
         }
+
+
         render()
     </script>
 </body>
