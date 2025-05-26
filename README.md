@@ -1,2 +1,2 @@
 # jogo-clicker
-https://jogo-clicker-one.vercel.app/
+https://jogo-clicker-ad7y.vercel.app/
